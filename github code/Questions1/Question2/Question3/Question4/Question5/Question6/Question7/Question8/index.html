@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Frames vs Modern Layout</title>
+</head>
+<body>
+
+<h1>Frames: Old Approach vs Modern Design</h1>
+
+<h2>Old approach (Frameset)</h2>
+<pre>
+&lt;frameset cols="20%,80%"&gt;
+  &lt;frame src="nav.html"&gt;
+  &lt;frame src="content.html"&gt;
+&lt;/frameset&gt;
+</pre>
+<p>Splits the browser window into separate HTML documents. Deprecated, bad for SEO, accessibility and browser history.</p>
+
+<h2>Modern approach (Semantic HTML + CSS)</h2>
+<nav>
+  <a href="#">Home</a> |
+  <a href="#">Courses</a> |
+  <a href="#">Contact</a>
+</nav>
+<main>
+  <p>All content stays in one document, laid out using nav and main tags with CSS instead of frames.</p>
+</main>
+
+</body>
+</html>

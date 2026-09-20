@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>BCA Class Timetable</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>BCA – III Semester Timetable</h1>
+
+<table>
+  <caption>Department of Computer Applications — Effective from Current Semester</caption>
+  <thead>
+    <tr>
+      <th scope="col">Day / Period</th>
+      <th scope="col">9:00–9:55<br>Period 1</th>
+      <th scope="col">9:55–10:50<br>Period 2</th>
+      <th scope="col">10:50–11:05<br>Break</th>
+      <th scope="col">11:05–12:00<br>Period 3</th>
+      <th scope="col">12:00–12:55<br>Period 4</th>
+      <th scope="col">12:55–13:30<br>Lunch</th>
+      <th scope="col">13:30–14:25<br>Period 5</th>
+      <th scope="col">14:25–16:15<br>Period 6 &amp; 7</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Monday</th>
+      <td>Data Structures<br><small>Dr. R. Sharma</small></td>
+      <td>Mathematics-III<br><small>Ms. A. Verma</small></td>
+      <td class="break-cell" rowspan="6">BREAK</td>
+      <td>DBMS<br><small>Dr. R. Sharma</small></td>
+      <td>Operating Systems<br><small>Mr. S. Iyer</small></td>
+      <td class="lunch-cell" rowspan="6">LUNCH</td>
+      <td colspan="2" class="lab">Programming Lab (C/C++)<br><small>Dr. R. Sharma — Lab 1</small></td>
+    </tr>
+    <tr>
+      <th scope="row">Tuesday</th>
+      <td>Operating Systems<br><small>Mr. S. Iyer</small></td>
+      <td>DBMS<br><small>Dr. R. Sharma</small></td>
+      <td>Mathematics-III<br><small>Ms. A. Verma</small></td>
+      <td>Data Structures<br><small>Dr. R. Sharma</small></td>
+      <td>Communication Skills<br><small>Ms. P. Nair</small></td>
+      <td>Web Technology<br><small>Mr. K. Das</small></td>
+    </tr>
+    <tr>
+      <th scope="row">Wednesday</th>
+      <td>DBMS<br><small>Dr. R. Sharma</small></td>
+      <td>Data Structures<br><small>Dr. R. Sharma</small></td>
+      <td>Web Technology<br><small>Mr. K. Das</small></td>
+      <td>Mathematics-III<br><small>Ms. A. Verma</small></td>
+      <td colspan="2" class="lab">DBMS Lab<br><small>Dr. R. Sharma — Lab 2</small></td>
+    </tr>
+    <tr>
+      <th scope="row">Thursday</th>
+      <td>Mathematics-III<br><small>Ms. A. Verma</small></td>
+      <td>Web Technology<br><small>Mr. K. Das</small></td>
+      <td>Operating Systems<br><small>Mr. S. Iyer</small></td>
+      <td>DBMS<br><small>Dr. R. Sharma</small></td>
+      <td>Data Structures<br><small>Dr. R. Sharma</small></td>
+      <td>Communication Skills<br><small>Ms. P. Nair</small></td>
+    </tr>
+    <tr>
+      <th scope="row">Friday</th>
+      <td>Web Technology<br><small>Mr. K. Das</small></td>
+      <td>Operating Systems<br><small>Mr. S. Iyer</small></td>
+      <td>Data Structures<br><small>Dr. R. Sharma</small></td>
+      <td>Communication Skills<br><small>Ms. P. Nair</small></td>
+      <td colspan="2" class="lab">Web Technology Lab<br><small>Mr. K. Das — Lab 1</small></td>
+    </tr>
+    <tr>
+      <th scope="row">Saturday</th>
+      <td>Communication Skills<br><small>Ms. P. Nair</small></td>
+      <td>Mathematics-III<br><small>Ms. A. Verma</small></td>
+      <td>Operating Systems<br><small>Mr. S. Iyer</small></td>
+      <td>Library / Seminar</td>
+      <td colspan="2">— No Class —</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Why Tables Are Appropriate Here</h2>
+<p>
+A timetable is inherently <strong>tabular, grid-based data</strong>: every entry is defined by the
+intersection of two variables — a day and a period — exactly what an HTML
+<code>&lt;table&gt;</code> is built to represent. Using <code>&lt;table&gt;</code>
+instead of <code>&lt;div&gt;</code> grids or CSS layout gives several concrete benefits:
+</p>
+<ul>
+  <li><strong>Semantic correctness:</strong> screen readers and assistive tools announce table
+  headers (<code>&lt;th&gt;</code>) and can read "Monday, Period 3, DBMS" as a related unit,
+  which a purely visual div-grid cannot convey without extra ARIA work.</li>
+  <li><strong>Natural handling of merged cells:</strong> a lunch break or a two-hour lab session
+  spans several periods or days. <code>rowspan</code> and <code>colspan</code> express this
+  directly, whereas replicating it with CSS grid needs manual column/row-span calculations.</li>
+  <li><strong>Row/column scoping:</strong> <code>scope="row"</code> and <code>scope="col"</code>
+  let each data cell be unambiguously tied to its day and period for both sighted and
+  non-sighted users.</li>
+  <li><strong>Predictable alignment:</strong> tables auto-align columns of unequal content length,
+  keeping the grid readable without manual width calculations.</li>
+</ul>
+
+</body>
+</html>

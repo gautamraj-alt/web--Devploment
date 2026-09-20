@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student Registration Form</title>
+</head>
+<body>
+
+<h1>Student Registration Form</h1>
+
+<form action="#" method="post" enctype="multipart/form-data">
+
+  <fieldset>
+    <legend>Personal Details</legend>
+
+    <p>
+      <label for="fullname">Full Name</label><br>
+      <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+    </p>
+
+    <p>
+      <label for="email">Email Address</label><br>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+    </p>
+
+    <p>
+      <label for="password">Password</label><br>
+      <input type="password" id="password" name="password" minlength="8" required>
+      <br><small>Minimum 8 characters.</small>
+    </p>
+
+    <p>
+      <label for="dob">Date of Birth</label><br>
+      <input type="date" id="dob" name="dob" required>
+    </p>
+
+    <p>
+      <label>Gender</label><br>
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Female</label>
+      <input type="radio" id="other" name="gender" value="other">
+      <label for="other">Other</label>
+    </p>
+  </fieldset>
+
+  <fieldset>
+    <legend>Academic Details</legend>
+    <p>
+      <label for="course">Course</label><br>
+      <select id="course" name="course" required>
+        <option value="">-- Select a course --</option>
+        <option value="bca">BCA</option>
+        <option value="bsc-cs">B.Sc. Computer Science</option>
+        <option value="bba">BBA</option>
+        <option value="btech">B.Tech</option>
+      </select>
+    </p>
+  </fieldset>
+
+  <fieldset>
+    <legend>Interests</legend>
+    <p>
+      <label>Hobbies</label><br>
+      <input type="checkbox" id="hobby-coding" name="hobbies" value="coding">
+      <label for="hobby-coding">Coding</label>
+      <input type="checkbox" id="hobby-reading" name="hobbies" value="reading">
+      <label for="hobby-reading">Reading</label>
+      <input type="checkbox" id="hobby-sports" name="hobbies" value="sports">
+      <label for="hobby-sports">Sports</label>
+      <input type="checkbox" id="hobby-music" name="hobbies" value="music">
+      <label for="hobby-music">Music</label>
+    </p>
+  </fieldset>
+
+  <fieldset>
+    <legend>Contact &amp; Documents</legend>
+
+    <p>
+      <label for="address">Address</label><br>
+      <textarea id="address" name="address" rows="3" cols="40" placeholder="House no., street, city, state, PIN"></textarea>
+    </p>
+
+    <p>
+      <label for="photo">Upload Photo</label><br>
+      <input type="file" id="photo" name="photo" accept="image/*">
+    </p>
+  </fieldset>
+
+  <p>
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+  </p>
+
+</form>
+
+</body>
+</html>

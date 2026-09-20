@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Department Page - Semantic HTML5 Layout</title>
+</head>
+<body>
+
+<!-- <header>: introductory content for the page - branding, title, primary nav -->
+<header>
+  <h1>Department of Computer Science &amp; IT</h1>
+  <nav>
+    <ul>
+      <li><a href="#news">News</a></li>
+      <li><a href="#events">Events</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- <main>: the one primary, unique content area of this document -->
+<main>
+  <h2 id="news">Department News</h2>
+
+  <!-- Each <article> is independently distributable content - it would still make sense on its own, e.g. in an RSS feed -->
+  <article>
+    <h3>New AI Lab Inaugurated</h3>
+    <p>The department opened a dedicated AI/ML lab this semester for final-year projects.</p>
+  </article>
+
+  <article id="events">
+    <h3>Annual Tech Fest - Registrations Open</h3>
+    <p>Students can register for the coding, robotics and quiz events until next Friday.</p>
+  </article>
+</main>
+
+<!-- <aside>: content related to the main content but separable from it, e.g. quick links -->
+<aside>
+  <h3>Quick Links</h3>
+  <ul>
+    <li><a href="#">Exam Timetable</a></li>
+    <li><a href="#">Library Portal</a></li>
+    <li><a href="#">Placement Cell</a></li>
+  </ul>
+</aside>
+
+<section>
+  <h2>Why semantic elements instead of generic div</h2>
+  <p>
+    A generic div carries no meaning - it tells the browser and assistive technology
+    nothing about what the content inside it is. Elements like header, nav, main, article,
+    aside and footer describe the role each region plays. This lets a screen reader
+    announce landmarks ("navigation", "main content") so a user can jump straight to the
+    part they want, lets search engines weight content correctly, and makes the raw markup
+    far easier for another developer to read without hunting through a sea of identically
+    named div wrappers.
+  </p>
+</section>
+
+<!-- <footer>: closing, page-wide metadata -->
+<footer>
+  <p>&copy; 2026 Department of Computer Science &amp; IT, KMCLU Lucknow.</p>
+</footer>
+
+</body>
+</html>

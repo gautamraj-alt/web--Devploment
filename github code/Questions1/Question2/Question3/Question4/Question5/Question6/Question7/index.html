@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title> HTML Character Entity </title>
+</head>
+<body>
+
+<h1> HTML Character Entity </h1>
+
+<table border="1" cellpadding="6">
+  <thead>
+    <tr><th>Displayed</th><th>Entity used</th><th>Meaning</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>&copy;</td><td>&amp;copy;</td><td>Copyright symbol</td></tr>
+    <tr><td>&reg;</td><td>&amp;reg;</td><td>Registered trademark</td></tr>
+    <tr><td>&trade;</td><td>&amp;trade;</td><td>Trademark</td></tr>
+    <tr><td>&lt; &gt;</td><td>&amp;lt; &amp;gt;</td><td>Literal angle brackets (would otherwise be read as an HTML tag)</td></tr>
+    <tr><td>&amp;</td><td>&amp;amp;</td><td>Literal ampersand</td></tr>
+    <tr><td>&ldquo;quoted&rdquo;</td><td>&amp;ldquo; &amp;rdquo;</td><td>Curly (typographic) double quotation marks</td></tr>
+    <tr><td>&lsquo;quoted&rsquo;</td><td>&amp;lsquo; &amp;rsquo;</td><td>Curly single quotation marks</td></tr>
+    <tr><td>&sum;</td><td>&amp;sum;</td><td>Summation symbol</td></tr>
+    <tr><td>&infin;</td><td>&amp;infin;</td><td>Infinity</td></tr>
+    <tr><td>&radic;</td><td>&amp;radic;</td><td>Square root</td></tr>
+    <tr><td>&plusmn;</td><td>&amp;plusmn;</td><td>Plus-minus</td></tr>
+    <tr><td>&times;</td><td>&amp;times;</td><td>Multiplication sign</td></tr>
+    <tr><td>&divide;</td><td>&amp;divide;</td><td>Division sign</td></tr>
+    <tr><td>&ne;</td><td>&amp;ne;</td><td>Not equal to</td></tr>
+    <tr><td>&le; &ge;</td><td>&amp;le; &amp;ge;</td><td>Less/greater than or equal to</td></tr>
+    <tr><td>&pi;</td><td>&amp;pi;</td><td>Pi (Greek letter)</td></tr>
+    <tr><td>a&nbsp;&nbsp;b</td><td>&amp;nbsp;</td><td>Non-breaking space</td></tr>
+  </tbody>
+</table>
+
+<h2>Why character references are useful</h2>
+<p>
+  Some characters, such as &lt; and &amp;, are part of HTML's own syntax, so typing them
+  directly can confuse the browser into thinking a tag or an entity is starting. A
+  character reference lets the browser display the character literally instead of
+  interpreting it. Character references are also useful for symbols that are hard or
+  impossible to type directly on a standard keyboard - mathematical notation like
+  &amp;sum; or &amp;infin;, typographic quotation marks, and symbols like &copy; or
+  &trade; that carry specific legal meaning and should render consistently regardless
+  of the page's text encoding.
+</p>
+
+</body>
+</html>
